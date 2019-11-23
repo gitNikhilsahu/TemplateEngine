@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="{% static 'css/Welcome.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>EMPLOYEES LIST IS ....!!</h1>
+    {% if elist %}
+    <table border="1px">
+        <thead>
+            <th>EMPID</th>
+            <th>EMPNAME</th>
+            <th>EMPSAL</th>
+            <th>EMPADD</th>
+        {% for emp in elist %}
+        <tr>
+            <td>{{ emp.EmpID }}</td>
+            <td>{{ emp.EmpName }}</td>
+            <td>{{ emp.EmpSal }}</td>
+            <td>{{ emp.EmpAdd }}</td>
+        </tr>
+        {% endfor %}
+        </thead>
+    </table>
+    {% else %}
+    <h2>Sorry No record Found</h2>
+    {% endif %}
+</body>
+</html>

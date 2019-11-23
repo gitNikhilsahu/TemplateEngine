@@ -1,0 +1,16 @@
+body {
+    background-image: url('/static/images/bg.jpg');
+    background-repeat: no-repeat;
+}
+
+table{
+    margin: auto;
+    background: yellow;
+    width: 100%;
+}
+
+h1{
+    color: red;
+    text-align: center;
+    font-family: taboma;
+}
